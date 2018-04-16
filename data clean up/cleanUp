@@ -1,0 +1,52 @@
+import numpy as np
+from sklearn import datasets
+import pandas as pd
+
+#Iris Classification
+def iris_data():
+    iris = datasets.load_iris()
+    x = iris.data
+    y = iris.target
+
+    xdf = pd.DataFrame(x)
+    xdf.to_csv("x_iris.csv",header=None,index=None)
+
+    ydf = pd.DataFrame(y)
+    ydf.to_csv("y_iris.csv",header=None,index=None)
+
+#Digit Classification
+def digit_data():
+    digit = datasets.load_digits()
+    x = digit.data
+    y = digit.target
+
+    xdf = pd.DataFrame(x)
+    xdf.to_csv("x_digit.csv", header=None, index=None)
+
+    ydf = pd.DataFrame(y)
+    ydf.to_csv("y_digit.csv", header=None, index=None)
+
+#Boston housing price data - Regression
+def boston_data():
+    housing = datasets.load_boston()
+    x = housing.data
+    y = housing.target
+
+    xdf = pd.DataFrame(x)
+    xdf.to_csv("x_boston.csv", header=None, index=None)
+
+    ydf = pd.DataFrame(y)
+    ydf.to_csv("y_boston.csv", header=None, index=None)
+
+#Wine Classification - used for clustering
+def wine_data():
+    wine = datasets.load_wine()
+    x = wine.data
+    y = wine.target
+
+    xdf = pd.DataFrame(x)
+    xdf.to_csv("x_wine.csv", header=None, index=None)
+
+    ydf = pd.DataFrame(y)
+    ydf.to_csv("y_wine.csv", header=None, index=None)
+
